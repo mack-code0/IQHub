@@ -1,0 +1,98 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+@font-face {
+    font-family: boldFont;
+    src: url("../font/DMSans-Bold.ttf");
+}
+
+@font-face {
+    font-family: regularFont;
+    src: url("../font/DMSans-Regular.ttf");
+}
+
+@font-face {
+    font-family: mediumFont;
+    src: url("../font/DMSans-Medium.ttf");
+}
+
+/* Text colors */
+.dark_txt{color: #3e4042}
+.purple_txt{color: #757fef;}
+.dark_purple_txt{color: #5A5AB5}
+.light_purple_txt{color: #d3e8ff}
+.orange_txt{color: #ff8100}
+.light_orange_txt{color: #ffdcc1}
+.grey_txt{color: #ececec}
+.light_grey_txt{color: #c9c9c9}
+.green_txt{color: #65d866}
+.reddish_txt{color: #ff5d5d}
+
+/* Background Colors */
+.main_bg{background-color: #f5f7fa;}
+.dark_bg{background-color: #3e4042}
+.purple_bg{background-color: #757fef;}
+.dark_purple_bg{background-color: #5A5AB5}
+.light_purple_bg{background-color: #d3e8ff}
+.orange_bg{background-color: #ff8100}
+.light_orange_bg{background-color: #ffdcc1}
+.grey_bg{background-color: #ececec}
+.light_grey_bg{background-color: #f9fafb}
+.green_bg{background-color: #65d866}
+.reddish_bg{background-color: #ff5d5d}
+
+
+
+
+
+
+
+
+
+
+.left_section{
+    height: 100vh;
+    width: 250px;
+    background-color: #fff;
+}
+
+.logo span{
+    font-family: boldFont;
+}
+
+nav{
+    margin-top: 80px;
+    margin-bottom: 150px;
+}
+nav a{
+    font-family: mediumFont;
+    margin-bottom: 40px;
+    text-decoration: none;
+}
+nav a i{
+    font-size: 20px;
+}
+nav a.active{
+    color: #3e4042;
+}
+
+
+.left_section form button{
+    border: none;
+    font-family: mediumFont;
+    color: #fff;
+    border-radius: 9px;
+}
+
+
+
+
+.right_section{
+    width: 100%;
+    height: 100vh;
+    background-color: red;
+}

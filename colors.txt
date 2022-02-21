@@ -1,0 +1,14 @@
+blue - 757FEF
+dark blue - 747EEE
+light blue - D3E8FF
+orange - FF8100
+light orange - FFDCC1
+
+grey - ECECEC
+ligh grey - F9FAFB
+
+background - FBFBFD
+text color - 3E4042
+
+green - 65D866
+teal - FF5D5D
