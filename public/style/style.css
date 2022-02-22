@@ -21,7 +21,8 @@
 }
 
 /* Text colors */
-.dark_txt{color: #3e4042}
+.dark_txt{color: #143d64}
+.white_txt{color: #fff}
 .purple_txt{color: #757fef;}
 .dark_purple_txt{color: #5A5AB5}
 .light_purple_txt{color: #d3e8ff}
@@ -35,6 +36,7 @@
 /* Background Colors */
 .main_bg{background-color: #f5f7fa;}
 .dark_bg{background-color: #3e4042}
+.white_bg{background-color: #fff;}
 .purple_bg{background-color: #757fef;}
 .dark_purple_bg{background-color: #5A5AB5}
 .light_purple_bg{background-color: #d3e8ff}
@@ -45,9 +47,15 @@
 .green_bg{background-color: #65d866}
 .reddish_bg{background-color: #ff5d5d}
 
+i{
+    font-size: 20px;
+}
 
-
-
+.button{
+    border: none;
+    font-family: mediumFont;
+    border-radius: 9px;
+}
 
 
 
@@ -56,8 +64,8 @@
 
 .left_section{
     height: 100vh;
-    width: 250px;
-    background-color: #fff;
+    width: 18%;
+    /* border-right: 1px solid #ececec; */
 }
 
 .logo span{
@@ -73,26 +81,74 @@ nav a{
     margin-bottom: 40px;
     text-decoration: none;
 }
-nav a i{
-    font-size: 20px;
-}
 nav a.active{
-    color: #3e4042;
-}
-
-
-.left_section form button{
-    border: none;
-    font-family: mediumFont;
-    color: #fff;
-    border-radius: 9px;
+    color: #143d64;
 }
 
 
 
 
 .right_section{
-    width: 100%;
+    width: 82%;
     height: 100vh;
-    background-color: red;
+    padding: 20px;
+}
+.inner_right_section{
+    width: 100%;
+    height: 100%;
+    border-radius: 9px;
+    /* border: 1px solid #ececec; */
+}
+.top_nav form{
+    width: fit-content;
+    border-radius: 9px;
+    font-family: regularFont;
+}
+.top_nav form input{
+    border: none;
+    background: none;
+}
+.top_nav form input::placeholder{
+    color: #5A5AB5;
+}
+.top_nav form button{
+    background: none;
+    border: none;
+}
+.top_nav_right div i{
+    cursor: pointer;
+}
+.top_nav_right .profile_pic{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+
+.exam_info_main{
+    width: 70%;
+    height: 100%;
+}
+.exam_info_main h3{
+    font-family: boldFont;
+}
+.exam_info_main .exam_name h6{
+    font-family: boldFont;
+}
+.exam_info_main .exam_name div{
+    border-radius: 9px;
+    font-family: regularFont;
+}
+.exam_subjects  div a{
+    width: fit-content;
+    text-decoration: none;
+}
+.exam_subjects  div a:hover{
+    color: #fff;
+    cursor: pointer;
+}
+
+.exam_info_right{
+    width: 30%;
+    height: 100%;
 }
