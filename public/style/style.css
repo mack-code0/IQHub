@@ -21,17 +21,17 @@
 }
 
 /* Text colors */
-.dark_txt{color: #143d64}
-.white_txt{color: #fff}
-.purple_txt{color: #757fef;}
-.dark_purple_txt{color: #5A5AB5}
-.light_purple_txt{color: #d3e8ff}
-.orange_txt{color: #ff8100}
-.light_orange_txt{color: #ffdcc1}
-.grey_txt{color: #ececec}
-.light_grey_txt{color: #c9c9c9}
-.green_txt{color: #65d866}
-.reddish_txt{color: #ff5d5d}
+.dark_txt{color: #143d64 !important;}
+.white_txt{color: #fff !important;}
+.purple_txt{color: #757fef !important;}
+.dark_purple_txt{color: #5A5AB5 !important;}
+.light_purple_txt{color: #d3e8ff !important;}
+.orange_txt{color: #ff8100 !important;}
+.light_orange_txt{color: #ffdcc1 !important;}
+.grey_txt{color: #ececec !important;}
+.light_grey_txt{color: #c9c9c9 !important;}
+.green_txt{color: #65d866 !important;}
+.reddish_txt{color: #ff5d5d !important;}
 
 /* Background Colors */
 .main_bg{background-color: #f5f7fa;}
@@ -50,13 +50,23 @@
 i{
     font-size: 20px;
 }
-
 .button{
     border: none;
     font-family: mediumFont;
     border-radius: 9px;
+    cursor: pointer;
 }
-
+.thick{
+    font-family: boldFont;
+    color: #143d64;
+}
+.less_thick{
+    font-family: regularFont;
+    color: #788896;
+}
+a{
+    text-decoration: none;
+}
 
 
 
@@ -65,7 +75,10 @@ i{
 .left_section{
     height: 100vh;
     width: 18%;
-    /* border-right: 1px solid #ececec; */
+    overflow-y: scroll;
+}
+.left_section::-webkit-scrollbar{
+    width: 0;
 }
 
 .logo span{
@@ -74,7 +87,6 @@ i{
 
 nav{
     margin-top: 80px;
-    margin-bottom: 150px;
 }
 nav a{
     font-family: mediumFont;
@@ -82,7 +94,7 @@ nav a{
     text-decoration: none;
 }
 nav a.active{
-    color: #143d64;
+    color: #143d64 !important;
 }
 
 
@@ -97,6 +109,7 @@ nav a.active{
     width: 100%;
     height: 100%;
     border-radius: 9px;
+    overflow-y: hidden;
     /* border: 1px solid #ececec; */
 }
 .top_nav form{
@@ -126,8 +139,11 @@ nav a.active{
 
 
 .exam_info_main{
-    width: 70%;
-    height: 100%;
+    width: 65%;
+    overflow-y: scroll;
+}
+.exam_info_main::-webkit-scrollbar{
+    width: 0;
 }
 .exam_info_main h3{
     font-family: boldFont;
@@ -139,6 +155,7 @@ nav a.active{
     border-radius: 9px;
     font-family: regularFont;
 }
+
 .exam_subjects  div a{
     width: fit-content;
     text-decoration: none;
@@ -147,8 +164,64 @@ nav a.active{
     color: #fff;
     cursor: pointer;
 }
+.subject{
+    cursor: pointer;
+    height: 120px;
+    border: 1px solid #ececec;
+    border-radius: 9px;
+    transition: all 0.2s;
+}
+.subject:hover{
+    position: relative;
+    box-shadow: #ececec3f 0px 48px 100px 0px;
+}
+
 
 .exam_info_right{
-    width: 30%;
+    width: 35%;
     height: 100%;
+}
+.inner_exam_info_right{
+    border-radius: 12px;
+}
+.total_questions span,
+.total_students span{
+    border-radius: 9px;
+    cursor: pointer;
+}
+.total_questions h6,
+.total_students h6,
+.exam_actions h6{
+    font-size: 13px;
+}
+.exam_actions div a{
+    width: fit-content;
+}
+
+
+
+
+/* Add Exam Part */
+.question input{
+    border-radius: 9px;
+    height: 45px;
+    padding-left: 10px;
+}
+.question textarea{
+    padding-left: 10px;
+    padding-top: 7px;
+    border-radius: 9px;
+}
+.question input,
+.question textarea{
+    color: #5A5AB5;
+    transition: all 0.2s;
+    font-family: regularFont;
+    background: #f9fafb;
+    border: 1px solid #ececec;
+}
+.question input:focus,
+.question textarea:focus{
+    border: 1px solid #5A5AB5;
+    outline: none;
 }
