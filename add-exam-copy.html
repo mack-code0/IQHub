@@ -55,24 +55,19 @@
                 </div>
 
                 <div class="exam_info w-100 h-100 d-flex">
+                    
                     <div class="exam_info_main w-100">
                         <div class="mb-3 add_subject d-flex">
-                            <input type="text" placeholder="Subject Name" class="me-2">
-                            <button class="button px-3 py-2 dark_purple_bg white_txt d-flex align-items-center"><i class="bx bx-plus me-2"></i> Add Subject</button>
+                            <input onkeyup="checkInput(this)" type="text" placeholder="Subject Name" class="me-2">
+                            <button disabled class="button px-3 py-2 dark_purple_bg white_txt d-flex align-items-center"><i class="bx bx-plus me-2"></i> Add Subject</button>
                         </div>
                         <div class="exam_subject_names w-100 d-flex align-items-center"></div>
-                    
-                        <!-- <form class="w-100" action=""> -->
-                            <div class="all_question_to_add"></div>
-
-                                <div class="exam_btns d-flex align-items-center justify-content-end mt-5">
-                                    <button class="button px-3 py-2 me-2 light_orange_bg orange_txt d-flex align-items-center add_question"><i class="bx bx-plus me-2"></i> Add Question</button>
-                                    <button class="button px-3 py-2 me-2 dark_purple_bg white_txt d-flex align-items-center"><i class="bx bxs-archive me-2"></i> Save to Draft</button>
-                                    <button class="button px-3 py-2 green_bg white_txt d-flex align-items-center"><i class="bx bx-check me-2"></i> Done</button>
-                                </div>
-
-
-                        <!-- </form> -->
+                        <div class="exam_btns d-flex align-items-center justify-content-end">
+                            <button class="button px-3 py-2 me-2 light_orange_bg orange_txt d-flex align-items-center add_question"><i class="bx bx-plus me-2"></i> Add Question</button>
+                            <button class="button px-3 py-2 me-2 dark_purple_bg white_txt d-flex align-items-center"><i class="bx bxs-archive me-2"></i> Save to Draft</button>
+                            <button class="button px-3 py-2 green_bg white_txt d-flex align-items-center"><i class="bx bx-check me-2"></i> Done</button>
+                        </div>
+                        <div class="all_question_to_add"></div>
                     </div>
 
                     <div class="exam_info_right ps-4">
@@ -109,6 +104,7 @@
                             </div>
                         </div>
                     </div>
+
                 </div>
 
             </div>
