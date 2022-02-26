@@ -141,6 +141,7 @@ nav a.active{
 .exam_info_main{
     width: 65%;
     overflow-y: scroll;
+    padding-bottom: 100px;
 }
 .exam_info_main::-webkit-scrollbar{
     width: 0;
@@ -202,7 +203,31 @@ nav a.active{
 
 
 /* Add Exam Part */
-.question input{
+.exam_subject_names button{
+    font-size: 13px;
+    white-space: nowrap;
+}
+.exam_subject_names button a{
+    color: #fff;
+}
+.exam_subject_names button i{
+    font-size: 13px;
+}
+.exam_subject_names{
+    overflow-x: scroll;
+}
+.exam_subject_names::-webkit-scrollbar{
+    width: 0;
+}
+.delete_subject{
+    background: none;
+    border: none;
+}
+.add_subject input::placeholder{
+    color: #5A5AB5;
+}
+.question input,
+.add_subject input{
     border-radius: 9px;
     height: 45px;
     padding-left: 10px;
@@ -213,15 +238,17 @@ nav a.active{
     border-radius: 9px;
 }
 .question input,
-.question textarea{
-    color: #5A5AB5;
+.question textarea,
+.add_subject input{
+    color: #3e4042;
     transition: all 0.2s;
     font-family: regularFont;
     background: #f9fafb;
-    border: 1px solid #ececec;
+    border: 1px solid #cbcbf1;
 }
 .question input:focus,
-.question textarea:focus{
+.question textarea:focus,
+.add_subject input:focus{
     border: 1px solid #5A5AB5;
     outline: none;
 }
