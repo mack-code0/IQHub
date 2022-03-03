@@ -5,42 +5,48 @@ const add_btn = document.querySelector(".add_question")
 const all_questions_holder = {}
 
 add_btn.addEventListener("click", function(){
-    // The id to the current active tab gotten from the id of add_btn
-    const question_tab_id  = this.id.split("_")[0]
-
-    
-    // Options of the question
-    const options = document.querySelectorAll(`#${question_tab_id} .question .question_options .options div input`);
-    // Question about to be added
-    const main_question = document.querySelector(`#${question_tab_id} .question .question_options textarea`)
-    // Array to hold the options after looping through them
-    const option_holder = []
-    options.forEach(inp=>{
-        option_holder.push(inp.value)
-    })
-
-    const next_question_number = document.querySelector(`.${question_tab_id}_current_number`)
-
-    // Check if the tab this question belongs to is already in the object holding all the questions
-    // If the tab is already present, then update it by pushing the question to the tab it belongs, else create the tab and assign the new question to the tab
-    if(all_questions_holder[`${this.id}`]){
-        const question_model = {question: main_question.value, options: option_holder}
-        all_questions_holder[`${this.id}`].push(question_model)
-        // Adding new question to the view
-        add_new_question(question_model, all_questions_holder[`${this.id}`].length, question_tab_id)
-        next_question_number.innerHTML = all_questions_holder[`${this.id}`].length + 1 +"."
+    if(!this.id){
+        alert("Select a Subject!")
     }else{
-        all_questions_holder[`${this.id}`] = [{question: main_question.value, options: option_holder}]
-        // Adding new question to the view
-        add_new_question(all_questions_holder[`${this.id}`][0], 1, question_tab_id)
-        next_question_number.innerHTML = 2 + "."
+        // The id to the current active tab gotten from the id of add_btn
+        const question_tab_id  = this.id.split("_")[0]
+        // Question about to be added
+        const main_question = document.querySelector(`#${question_tab_id} .question .question_options textarea`)
+        // Options of the question
+        const options = document.querySelectorAll(`#${question_tab_id} .question .question_options .options div input`);
+        // Array to hold the options after looping through them
+        const option_holder = []
+        options.forEach(inp=>{
+            option_holder.push(inp.value)
+        })
+    
+        const verify_options = option_holder.findIndex(e=>e.length<1)
+        if(main_question.value.length < 5 || verify_options !== -1){
+            alert("Invalid Inputs")
+        }else{
+            const next_question_number = document.querySelector(`.${question_tab_id}_current_number`)
+            // Check if the tab this question belongs to is already in the object holding all the questions
+            // If the tab is already present, then update it by pushing the question to the tab it belongs, else create the tab and assign the new question to the tab
+            if(all_questions_holder[`${this.id}`]){
+                const question_model = {question: main_question.value, options: option_holder}
+                all_questions_holder[`${this.id}`].push(question_model)
+                // Adding new question to the view
+                add_new_question(question_model, all_questions_holder[`${this.id}`].length, question_tab_id)
+                next_question_number.innerHTML = all_questions_holder[`${this.id}`].length + 1 +"."
+            }else{
+                all_questions_holder[`${this.id}`] = [{question: main_question.value, options: option_holder}]
+                // Adding new question to the view
+                add_new_question(all_questions_holder[`${this.id}`][0], 1, question_tab_id)
+                next_question_number.innerHTML = 2 + "."
+            }
+        
+            // Set the input values to none
+            main_question.value = ""
+            options.forEach(inp=>{
+                inp.value = ""
+            })
+        }
     }
-
-    // Set the input values to none
-    main_question.value = ""
-    options.forEach(inp=>{
-        inp.value = ""
-    })
 })
 
 

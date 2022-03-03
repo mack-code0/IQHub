@@ -138,6 +138,7 @@ nav a.active{
 }
 
 
+
 .exam_info_main{
     width: 65%;
     overflow-y: scroll;
@@ -225,6 +226,11 @@ nav a.active{
 }
 .add_subject input::placeholder{
     color: #5A5AB5;
+}
+.add_subject button:disabled,
+.add_subject button[disabled]{
+  background-color: #a0a0c0;
+  color: #666666;
 }
 .question input,
 .add_subject input{
