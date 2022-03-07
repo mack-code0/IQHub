@@ -68,7 +68,39 @@
                             <button class="button px-3 py-2 me-2 dark_purple_bg white_txt d-flex align-items-center"><i class="bx bxs-archive me-2"></i> Save to Draft</button>
                             <button class="button px-3 py-2 green_bg white_txt d-flex align-items-center"><i class="bx bx-check me-2"></i> Done</button>
                         </div>
-                        <div class="all_question_to_add"></div>
+                        <div class="all_question_to_add">
+                            <div id="${real_subject_name}id" class="form_1 w-100">
+                                <h6 class="thick mb-4 mt-5">${subject_name.value} <span class="ms-1 light_purple_bg px-1 py-1 ${real_subject_name}id_current_number">[No. of Questions: ]</span></h6>
+                                <input type="hidden" class="question_edit_mode" value="false">
+                                <div class="question mb-5 w-100">
+                                    <div class="question_options w-100">
+                                        <textarea name="" id="${real_subject_name}id_main_question" class="w-100 mb-2" rows="4"></textarea>
+                                        <div class="options w-100 d-flex flex-wrap">
+                                            <div class="w-50 mb-2 pe-3">
+                                                <input class="form-check-input" type="radio" name="correct_option" id="option_a" value="A">
+                                                <label class="thick" for="option_a">A.</label>
+                                                <input type="text" id="option_a" class="w-100 ${real_subject_name}id_options">
+                                            </div>
+                                            <div class="w-50 mb-2 ps-3">
+                                                <input class="form-check-input" type="radio" name="correct_option" id="option_c" value="C">
+                                                <label class="thick" for="option_c">C.</label>
+                                                <input type="text" id="option_c" class="w-100 ${real_subject_name}id_options">
+                                            </div>
+                                            <div class="w-50 mt-2 pe-3">
+                                                <input class="form-check-input" type="radio" name="correct_option" id="option_b" value="B">
+                                                <label class="thick" for="option_b">B.</label>
+                                                <input type="text" id="option_b" class="w-100 ${real_subject_name}id_options">
+                                            </div>
+                                            <div class="w-50 mt-2 ps-3">
+                                                <input class="form-check-input" type="radio" name="correct_option" id="option_d" value="D">
+                                                <label class="thick" for="option_d">D.</label>
+                                                <input type="text" id="option_d" class="w-100 ${real_subject_name}id_options">
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+                        </div>
                     </div>
 
                     <div class="exam_info_right ps-4">
@@ -118,5 +150,6 @@
     <script src="/public/javascript/myscript.js"></script>
     <script src="/public/javascript/add-subject.js"></script>
     <script src="/public/style/bootstrap/js/bootstrap.min.js"></script>
+
 </body>
 </html>

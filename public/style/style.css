@@ -72,6 +72,7 @@ a{
 
 
 
+
 .left_section{
     height: 100vh;
     width: 18%;
@@ -228,11 +229,24 @@ nav a.active{
     color: #5A5AB5;
 }
 .add_subject button:disabled,
-.add_subject button[disabled]{
+.add_subject button[disabled],
+.submit_edit_question:disabled,
+.submit_edit_question[disabled]{
   background-color: #a0a0c0;
   color: #666666;
 }
-.question input,
+.edit_question_btn,
+.delete_question_btn{
+    font-family: boldFont;
+    font-size: 13px;
+}
+
+.edit_question_btn i,
+.delete_question_btn i{
+    font-size: 13px;
+}
+
+.question input[type*='text'],
 .add_subject input{
     border-radius: 9px;
     height: 45px;
@@ -243,7 +257,7 @@ nav a.active{
     padding-top: 7px;
     border-radius: 9px;
 }
-.question input,
+.question input[type*='text'],
 .question textarea,
 .add_subject input{
     color: #3e4042;
@@ -252,9 +266,17 @@ nav a.active{
     background: #f9fafb;
     border: 1px solid #cbcbf1;
 }
-.question input:focus,
+.question input[type*='text']:focus,
 .question textarea:focus,
 .add_subject input:focus{
     border: 1px solid #5A5AB5;
     outline: none;
+}
+.form-check-input:checked{
+    background-color: #65d866;
+    border-color: #65d866 !important;
+}
+.form-check-input{
+    border: 1px solid #cbcbf1 !important;
+    box-shadow:none !important;
 }
